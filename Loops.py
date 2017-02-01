@@ -14,3 +14,11 @@ print('If you keep on adding 5 to', str(num) + ", the first number above 100 is"
 """Write a program that will prompt the user for an input value (n) and double
 it IF is an ODD number, triple it if is an EVEN number and do nothing if it is
 anything else (like a decimal or a string)"""
+
+print('')
+print('Enter an integer')
+num = int(input())
+if int(num) % 2 == 0:
+    print(str(num), 'is even. When multiplied by three, answer is', str(n*3))
+else:
+    print(str(num), 'is odd. When doubled, annwer is', str(n*2))
