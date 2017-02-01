@@ -20,6 +20,23 @@ def DrawRectangle(AnyTurtle, l, w):
         AnyTurtle.left(90)
         AnyTurtle.fd(w)
         AnyTurtle.left(90)
-    wn.exitonclick()
 
 DrawRectangle("Bob", 150, 120)
+
+"""
+DrawPoly Function
+"""
+def DrawPoly(AnyTurtle, n):
+    import turtle
+    AnyTurtle = turtle.Turtle()
+    AnyTurtle.color("Lime Green")
+    wn = turtle.Screen()
+    wn.bgcolor("Black")
+    wn.title("Shape Creator!")
+    ang = (360/n)
+    for i in range(n):
+        AnyTurtle.fd(50)
+        AnyTurtle.left(ang)
+    wn.exitonclick()
+
+DrawPoly("Bob II" , 8)
