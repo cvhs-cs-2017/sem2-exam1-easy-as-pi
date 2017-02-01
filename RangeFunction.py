@@ -5,7 +5,8 @@ for i in range(40, 0, -1):
 
 """Repeat the exercise but count by 5's"""
 
-
+for i in range(40, 0, -5):
+    print(i)
 
 """Write a program that will count print all the multiples of (n) where n is
 taken from user input.  Include necessary print statements."""
