@@ -17,8 +17,12 @@ anything else (like a decimal or a string)"""
 
 print('')
 print('Enter an integer')
-num = int(input())
-if int(num) % 2 == 0:
-    print(str(num), 'is even. When multiplied by three, answer is', str(n*3))
-else:
-    print(str(num), 'is odd. When doubled, annwer is', str(n*2))
+num = input()
+if float(num) % 2 != 0 and float(num) % 2 != 1:
+    print('I asked for an integer, not a decimal')
+elif int(num) % 2 == 0:
+    num3 = int(num)*3
+    print(str(num), 'is even. When multiplied by three, answer is', num3)
+elif int(num) % 2 == 1:
+    num3 = int(num)*2
+    print(str(num), 'is odd. When doubled, annwer is', num3)
