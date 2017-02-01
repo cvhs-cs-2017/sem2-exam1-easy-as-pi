@@ -22,8 +22,11 @@ hi.pu()
 hi.goto(0,50)
 hi.pd()
 hi.goto(20,70)
-wn.exitonclick()
+
 
 
 """Import and Call the DrawRectangle(Anyturtle, l, w) function from the
 file MyFile.py"""
+
+from MyFile import DrawRectangle
+DrawRectangle("Bob", 150, 120)
