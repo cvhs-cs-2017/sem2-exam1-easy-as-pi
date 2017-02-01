@@ -32,6 +32,31 @@ def RemoveVowels(NormText):
             CipherText += ch
     return CipherText
 
-print(RemoveVowels('Computer Science Makes the World go round but it doesn\'t make the world round itself!'))
+NoVowels = RemoveVowels('Computer Science Makes the World go round but it doesn\'t make the world round itself!')
 
 """Write an encryption code that you make up and run it for the variable NoVowels"""
+
+def removeChar(string, idx):
+    return string[:idx] + string[idx+1:]
+def keyGen():
+    import random
+    alphabet = 'abcdefghijklmnopqrstuvwxyz '
+    key = ""
+    for i in range(len(alphabet)):
+        ch = random.randint(0,26-i)
+        key += alphabet[ch]
+        alphabet = removeChar(alphabet,ch)
+    return key
+
+CipherAlphabet = keyGen()
+alphabet = "abcdefghijklmnopqrstuvwxyz "
+
+def SubEncryption(string):
+    CipherText = ""
+    alphabet = "abcdefghijklmnopqrstuvwxyz"
+    string = string.lower()
+    for ch in string:
+        idx = alphabet.find(ch)
+        CipherText += CipherAlphabet[idx]
+    return CipherText
+print(SubEncryption(NoVowels))
