@@ -14,16 +14,6 @@ def BinaryToNum(num):
 print(BinaryToNum("10011"))
 
 """Write a program that would take a real number value and convert it into BINARY"""
-"""
-def NumToBinary(num2):
-    import math
-    binary = ''
-    while num2 != 0:
-        Floorlog2 = math.floor(math.log(int(num2),2))
-
-    return floor
-print(NumToBinary('9'))
-"""
 
 def NumToBinary(num2):
     import math
@@ -34,7 +24,9 @@ def NumToBinary(num2):
         binary += str(binarynum)
         if binarynum != 0:
             num2 = num2 - (2**Floorlog)
+        else:
+            num2 = num2
         Floorlog -= 1
     return binary
     #return binarynum
-print(NumToBinary(9))
+print(NumToBinary(19))
